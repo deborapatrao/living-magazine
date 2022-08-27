@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- map API - Script and css from the library -->
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/build/ol.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/css/ol.css"
+      type="text/css"
+    />
+    <!-- API code finish -->
+
+    <title>Contact Us</title>
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../javascript/main.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/b9caada545.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="wrapper">
+        <div class="logo-row">
+          <button
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+            aria-label="menu"
+            class="mobile-nav-toggle icon open-menu"
+            id="menu"
+          ></button>
+
+          <a href="../index.html" class="logo-link" title="Living magazine"
+            ><img
+              src="../images/logo.svg"
+              alt="Living Magazine logo"
+              class="logo"
+          /></a>
+        </div>
+
+        <div id="navbar">
+          <nav>
+            <ul id="primary-navigation" data-visible="false">
+              <li><a href="../index.html" class="fancy-link light">Home</a></li>
+              <li>
+                <a href="Articles.html" class="fancy-link light">Articles</a>
+              </li>
+              <li><a href="#" class="active light">Contact</a></li>
+              <li>
+                <a href="Sources.html" class="fancy0link light">Sources</a>
+              </li>
+              <li id="search-line">
+                <form action="">
+                  <input
+                    type="search"
+                    id="site-search"
+                    name="q"
+                    aria-label="search bar"
+                    placeholder="Type your search"
+                    title="Internal search"
+                  />
+                  <button
+                    class="icon search btn-search"
+                    aria-label="search"
+                  ></button>
+                </form>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrapper contact-us-container">
+        <div class="heading">
+          <h1>Contact Us</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+
+        <!-- Map - set as instructed on open layers -->
+        <div class="map-container">
+          <div id="map" class="map"></div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="contact-form">
+          <form
+            action="https://formspree.io/f/xwkyewjd"
+            target="_blank"
+            method="POST"
+          >
+            <fieldset>
+              <legend>Send a message</legend>
+
+              <label>
+                Your name
+                <input
+                  class="contact-inputs"
+                  type="text"
+                  name="name"
+                  required
+                />
+              </label>
+
+              <label>
+                Your email
+                <input class="contact-inputs" type="email" name="email" />
+              </label>
+
+              <label>
+                Your message
+                <textarea
+                  class="contact-inputs"
+                  name="message"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </label>
+
+              <button type="submit" class="btn-std">Send your message</button>
+            </fieldset>
+          </form>
+        </div>
+
+        <!-- Addresses -->
+        <div id="address">
+          <div class="location">
+            <h2>Membership and subscription</h2>
+            <h3>Online</h3>
+            <a class="light" href="#">living.com.ca/subscription</a>
+
+            <h3>Email</h3>
+            <a class="light" href="mailto:subscriptions@living.com.ca"
+              >subscriptions@living.com.ca</a
+            >
+
+            <h3>Phone</h3>
+            <a class="light" href="tel:+16047362988">(604) 736-2988</a>
+          </div>
+
+          <div class="location">
+            <h2>Headquarters locations</h2>
+
+            <h3>Canada</h3>
+            <p>100 49th Ave W <br />Vancouver, BC V5Y 2Z6</p>
+
+            <h3>Australia</h3>
+            <p>405/ 168 Kent St <br />Sydney, NSW 2000</p>
+
+            <h3>Brazil</h3>
+            <p>Rua Carutapera 11 <br />Sao Paulo, SP, 04456-190</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer">
+        <div class="wrapper footer-content">
+          <!-- Social links -->
+          <div class="social-row">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              aria-label="facebook"
+              ><i class="icon facebook" aria-hidden="true"></i
+            ></a>
+
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              aria-label="instagram"
+              ><i class="icon instagram" aria-hidden="true"></i
+            ></a>
+
+            <a href="https://twitter.com/" target="_blank" aria-label="twitter"
+              ><i class="icon twitter" aria-hidden="true"></i
+            ></a>
+
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              aria-label="youtube"
+              ><i class="icon youtube" aria-hidden="true"></i
+            ></a>
+          </div>
+
+          <!-- Logo -->
+          <a href="../index.html" class="logo-link"
+            ><img
+              src="../images/logo.svg"
+              alt="Living Magazine logo"
+              class="logo-footer"
+          /></a>
+
+          <!-- Bottom navigation -->
+          <div class="bottom-navigation">
+            <ul>
+              <li><a href="../index.html" class="fancy-link">Home</a></li>
+
+              <li><a href="Articles.html" class="fancy-link">Articles</a></li>
+
+              <li><a href="#" class="fancy-link">Contact</a></li>
+
+              <li><a href="Sources.html" class="fancy-link">Sources</a></li>
+            </ul>
+          </div>
+
+          <p class="copyright">
+            &copy; 2021 Living Magazine. All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

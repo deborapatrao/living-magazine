@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Living Magazine</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="javascript/main.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/b9caada545.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="wrapper">
+        <div class="logo-row">
+          <!--The 'aria-controls' will search for an id and it will give more context to screen-readers. In this case it will match the id on the navigation ul
+                the aria-expanded is there because the menu will not be expanded from start. The menu is closed at the beginning, when the button is clecked the menu will expand and the aria-expanded will change to true.-->
+          <button
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+            aria-label="menu"
+            class="mobile-nav-toggle icon open-menu"
+            id="menu"
+          ></button>
+
+          <h1 id="home-title">
+            <a href="index.html"
+              ><img
+                src="images/logo.svg"
+                alt="Living Magazine logo"
+                class="logo"
+            /></a>
+          </h1>
+        </div>
+
+        <div id="navbar">
+          <nav>
+            <ul id="primary-navigation" data-visible="false">
+              <!-- data-visible custom attribute to be used by JS and CSS, it is false when the menu is hidden, I'll use this to toggle it showing up. -->
+              <li><a href="#" class="active light">Home</a></li>
+              <li>
+                <a href="pages/Articles.html" class="fancy-link light"
+                  >Articles</a
+                >
+              </li>
+              <li>
+                <a href="pages/Contact.html" class="fancy-link light"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="pages/Sources.html" class="fancy-link light"
+                  >Sources</a
+                >
+              </li>
+              <li id="search-line">
+                <form action="">
+                  <input
+                    type="search"
+                    id="site-search"
+                    name="q"
+                    aria-label="search bar"
+                    placeholder="Type your search"
+                    title="Internal search"
+                  />
+                  <button
+                    class="icon search btn-search"
+                    aria-label="search"
+                  ></button>
+                </form>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- Header finish -->
+
+    <!-- Main -->
+    <main>
+      <div class="wrapper">
+        <!-- Articles -->
+        <div class="container mobile-grid three-column">
+          <!-- Article 1: Tardigrada -->
+          <article class="home-article-card">
+            <a href="pages/Tardigrada.html" class="image-link">
+              <img
+                src="images/tardigrada-home.jpg"
+                alt="Scanning electron micrograph of an adult water bear"
+                class="home-article-image"
+              />
+            </a>
+            <div class="home-article-content">
+              <div>
+                <a class="tags light" href="#">Animals</a>
+                <i>, </i>
+                <a class="tags light" href="#">Bilateria</a>
+              </div>
+              <a href="pages/Tardigrada.html">
+                <h2 class="home-article-title">
+                  Water bears: as huggable as mammalians but with super powers!
+                </h2>
+              </a>
+              <p>
+                Tardigrades, known colloquially as water bears or moss
+                piglets,are a phylum of eight-legged segmented ...
+                <a
+                  href="pages/Tardigrada.html"
+                  class="fancy-link read-more"
+                  title="Read Tardigrada full article"
+                  >Read More</a
+                >
+              </p>
+              <div class="article-author">
+                <p>
+                  By
+                  <a
+                    class="fancy-link light"
+                    href="https://en.wikipedia.org/wiki/Tardigrade"
+                    >Wikipedia - Tardigrade</a
+                  >
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 2: Nudibranch -->
+          <article class="home-article-card">
+            <a href="pages/Nudibranch.html" class="image-link">
+              <img
+                src="images/nudibranch-home.jpg"
+                alt="Close-up photography of the Cyerce Kikutarobaba nudibranch, found in Bali"
+                class="home-article-image"
+              />
+            </a>
+            <div>
+              <div>
+                <a class="tags light" href="#">Animals</a>
+                <i>, </i>
+                <a class="tags light" href="#">Bilateria</a>
+              </div>
+              <a href="pages/Nudibranch.html">
+                <h2 class="home-article-title">
+                  Not a real group. Should we care?
+                </h2>
+              </a>
+              <p>
+                Nudibranchs are a group of soft-bodied, marine gastropod
+                molluscs which shed their shells after their larval stage...<a
+                  href="pages/Nudibranch.html"
+                  class="fancy-link read-more"
+                  title="Read Nudibranch full article"
+                >
+                  Read More</a
+                >
+              </p>
+              <div class="article-author">
+                <p>
+                  By
+                  <a
+                    class="fancy-link light"
+                    href="https://en.wikipedia.org/wiki/Nudibranch"
+                    >Wikipedia - Nudibranch</a
+                  >
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 3: Radiolaria-->
+          <article class="home-article-card">
+            <a href="pages/Radiolaria.html" class="image-link">
+              <img
+                src="images/radiolaria-home.jpg"
+                alt="Ernst Haeckel illustration of Staphoidea radiolarians"
+                class="home-article-image"
+              />
+            </a>
+            <div>
+              <div>
+                <a class="tags light" href="#">Eukaryiotes</a>
+                <i>, </i>
+                <a class="tags light" href="#">Protozoa</a>
+              </div>
+              <a href="pages/Radiolaria.html">
+                <h2 class="home-article-title">
+                  Architecture before it was cool
+                </h2>
+              </a>
+              <p>
+                The Radiolaria, also called Radiozoa, are protozoa of diameter
+                0.1–0.2 mm that produce intricate mineral skeletons, typically
+                with a ...
+                <a
+                  href="pages/Radiolaria.html"
+                  class="fancy-link read-more"
+                  title="Read Radiolaria full article"
+                  >Read More</a
+                >
+              </p>
+              <div class="article-author">
+                <p>
+                  By
+                  <a
+                    href="https://en.wikipedia.org/wiki/Radiolaria"
+                    class="fancy-link light"
+                    >Wikipedia - Radiolaria</a
+                  >
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <a class="btn-std" href="pages/Articles.html"> More articles </a>
+        </div>
+        <!-- Articles end -->
+
+        <!-- Ad -->
+        <div class="ad-section-middle">
+          <div class="ad">
+            <p class="tags">ADVERTISEMENT</p>
+            <a href="#">
+              <img src="images/book-ad.jpg" alt="advertisement" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Most popular -->
+        <div class="mobile-grid two-column container">
+          <h2 id="popular-section-title">Most popular</h2>
+
+          <!-- Popular 1 -->
+          <div class="popular">
+            <a href="#">
+              <img
+                src="images/cicadellidae-thumbnail.jpg"
+                alt="Blue and red leafhopper (Graphocephala Coccinea)"
+                class="popular-image"
+              />
+            </a>
+            <div>
+              <a class="tags light">Hemiptera</a>
+              <a href="#">
+                <h3 class="popular-title">Cicadellidae - So many colours!</h3>
+              </a>
+            </div>
+          </div>
+
+          <!-- Popular 2 -->
+          <div class="popular">
+            <a href="#">
+              <img
+                src="images/basidiomycota-thumbnail.jpg"
+                alt="Close-Up Photography of red mushroom with white dots"
+                class="popular-image"
+              />
+            </a>
+            <div>
+              <a class="tags light">Basidiomycota</a>
+              <a href="#">
+                <h3 class="popular-title">
+                  Basidiomycota - A difficult name for your simple mushroom.
+                </h3>
+              </a>
+            </div>
+          </div>
+
+          <!-- Popular 3 -->
+          <div class="popular">
+            <a href="#">
+              <img
+                src="images/dinosauria-thumbanail.jpg"
+                alt="T-Rex skeleton, housed at Manchester Museum"
+                class="popular-image"
+              />
+            </a>
+            <div>
+              <a class="tags light">Diapsida</a>
+              <a href="#">
+                <h3 class="popular-title">
+                  Dinosauria - They live on in our hearts.
+                </h3>
+              </a>
+            </div>
+          </div>
+
+          <!-- Popular 4 -->
+          <div class="popular">
+            <a href="#">
+              <img
+                src="images/nymphaeaceae-thumbnail.jpg"
+                alt="Close-up Photo of Blue Water Lily Flower in Bloom"
+                class="popular-image"
+              />
+            </a>
+            <div>
+              <a class="tags light">Angiosperms</a>
+              <a href="#">
+                <h3 class="popular-title">
+                  Nymphaeaceae - The natural mandalas.
+                </h3>
+              </a>
+            </div>
+          </div>
+
+          <!-- Popular 5 -->
+          <div class="popular">
+            <a href="#">
+              <img
+                src="images/cucujiformia-thumbnail.jpg"
+                alt="Close up photography of blck and brown cucujiformia beetle"
+                class="popular-image"
+              />
+            </a>
+            <div>
+              <a class="tags light">Coleoptera</a>
+              <a href="#">
+                <h3 class="popular-title">
+                  Cucujiformia - The lost link between bettles and elephants.
+                </h3>
+              </a>
+            </div>
+          </div>
+
+          <!-- Popular 6 -->
+          <div class="popular">
+            <a href="#">
+              <img
+                src="images/araneae-thumbnail.jpg"
+                alt="Close-Up Photo of Spider"
+                class="popular-image"
+              />
+            </a>
+            <div>
+              <a class="tags light">Arachnida</a>
+              <a href="#">
+                <h3 class="popular-title">Araneae - Cute of Phobia?</h3>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Most popular end -->
+
+        <!-- Aside -->
+        <aside class="container">
+          <div class="mobile-grid two-column-medium">
+            <div id="get-published">
+              <h2>How to get published</h2>
+              <p>
+                Do you want to see your article featured in our magazine? Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <a id="btn-get-published" href="#">Discover here</a>
+            </div>
+
+            <div class="podcast-section">
+              <div>
+                <p class="tags">Living podcast</p>
+                <a href="#">
+                  <img src="images/podcast.jpg" alt="living podcast" />
+                </a>
+              </div>
+              <p>
+                Stay in tune with the last stories of all the living things!
+              </p>
+            </div>
+          </div>
+        </aside>
+        <!-- Aside end -->
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <!-- Newsletter -->
+      <div class="newsletter-section">
+        <div class="newsletter-content wrapper container">
+          <i class="icon mail" aria-hidden="true"></i>
+          <h2>Sign up to our newsletter</h2>
+
+          <form
+            action="https://formspree.io/f/xwkyewjd"
+            target="_blank"
+            method="POST"
+          >
+            <label for="email"
+              >Subscribe to get the latest news directly into your inbox!
+              <input
+                name="email"
+                type="email"
+                id="email"
+                placeholder="Your email"
+              />
+            </label>
+            <button class="btn-submit">Sign Up</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Real footer -->
+      <div class="footer">
+        <div class="wrapper footer-content">
+          <!-- Social links -->
+          <div class="social-row">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              aria-label="facebook"
+              ><i class="icon facebook" aria-hidden="true"></i
+            ></a>
+
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              aria-label="instagram"
+              ><i class="icon instagram" aria-hidden="true"></i
+            ></a>
+
+            <a href="https://twitter.com/" target="_blank" aria-label="twitter"
+              ><i class="icon twitter" aria-hidden="true"></i
+            ></a>
+
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              aria-label="youtube"
+              ><i class="icon youtube" aria-hidden="true"></i
+            ></a>
+          </div>
+
+          <!-- Logo -->
+          <a href="index.html" class="logo-link"
+            ><img
+              src="images/logo.svg"
+              alt="Living Magazine logo"
+              class="logo-footer"
+          /></a>
+
+          <!-- Bottom navigation -->
+          <div class="bottom-navigation">
+            <ul>
+              <li>
+                <a href="#" class="fancy-link">Home</a>
+              </li>
+
+              <li>
+                <a href="pages/Articles.html" class="fancy-link">Articles</a>
+              </li>
+
+              <li>
+                <a href="pages/Contact.html" class="fancy-link">Contact</a>
+              </li>
+
+              <li>
+                <a href="pages/Sources.html" class="fancy-link">Sources</a>
+              </li>
+            </ul>
+          </div>
+
+          <p class="copyright">
+            &copy; 2021 Living Magazine. All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
